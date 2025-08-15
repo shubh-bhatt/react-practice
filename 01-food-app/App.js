@@ -19,13 +19,19 @@ import ReactDOM from "react-dom/client";
 const Heading = () => {
   return (
     <div className="header">
-      <div>
-        <img></img>
+      <div className="logo-container">
+        <img
+          className="logo"
+          src="https://marketplace.canva.com/EAGXsRURT9o/1/0/1600w/canva-yellow-and-brown-kitchen-food-logo-JrzZUwc_CLQ.jpg"
+        />
+      </div>
+      <div className="nav-items">
         <ul>
           <li>Home</li>
           <li>Products</li>
           <li>About Us</li>
           <li>Contact</li>
+          <li>Cart</li>
         </ul>
       </div>
     </div>
