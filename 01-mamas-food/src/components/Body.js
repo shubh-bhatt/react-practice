@@ -16,7 +16,6 @@ const Body = () => {
               (restaurant) => restaurant.info.avgRating > 4
             );
             setResData(filteredList);
-            console.log(filteredList);
           }}
         >
           Top Rated Restaurants
