@@ -92,3 +92,17 @@
 .filter-button:active {
   scale: 0.95;
 }
+
+.login-button {
+  padding: 0px 20px;
+  border: none;
+  border-radius: 10px;
+}
+
+.login-button:hover {
+  cursor: pointer;
+}
+
+.login-button:active {
+  scale: 0.95;
+}
