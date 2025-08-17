@@ -77,3 +77,18 @@
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
+
+.filter-button {
+  padding: 10px;
+  border: none;
+  background-color: #0ea5e9;
+  font-size: 20px;
+}
+
+.filter-button:hover {
+  cursor: pointer;
+}
+
+.filter-button:active {
+  scale: 0.95;
+}
