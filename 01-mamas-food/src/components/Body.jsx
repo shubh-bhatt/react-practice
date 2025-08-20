@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 const Body = () => {
   const [resData, setResData] = useState(restaurantData);
+  const [searchData, setSearchData] = useState("");
 
   useEffect(() => {
     fetchData();
@@ -20,7 +21,30 @@ const Body = () => {
 
   return (
     <div className="body">
-      <div className="search">Search</div>
+      <div className="search">
+        <input
+          type="text"
+          className="input-button"
+          value={searchData}
+          onChange={(e) => {
+            setSearchData(e.target.value);
+          }}
+        />
+        <button
+          type="submit"
+          className="search-button"
+          onClick={() => {
+            const filteredRestaurants = resData.filter((res) => {
+              return res.info.name
+                .toLowerCase()
+                .includes(searchData.toLowerCase());
+            });
+            setResData(filteredRestaurants);
+          }}
+        >
+          Search
+        </button>
+      </div>
       <div className="filter">
         <button
           className="filter-button"
