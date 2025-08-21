@@ -94,9 +94,12 @@ function Pizza(props) {
 }
 
 function Footer() {
+  let time = new Date().toLocaleTimeString();
   return (
     <footer className="footer">
-      {new Date().toLocaleTimeString()} We're currently open
+      {time >= 9 && time <= 21
+        ? `${time} - We're currently open`
+        : `${time} - We're closed`}
     </footer>
   );
 }
