@@ -69,6 +69,7 @@ function Menu() {
   return (
     <main className="menu">
       <h2>Our Menu</h2>
+
       <ul className="pizzas">
         {pizzaData.map((pizza) => (
           <Pizza key={pizza.name} pizzaObj={pizza} />
@@ -94,12 +95,22 @@ function Pizza(props) {
 }
 
 function Footer() {
-  let time = new Date().toLocaleTimeString();
+  let hour = new Date().getHours();
+  let openHours = 9;
+  let closeHours = 21;
+  let isOpen = hour >= openHours && hour <= closeHours;
+  console.log(isOpen);
+
   return (
     <footer className="footer">
-      {time >= 9 && time <= 21
-        ? `${time} - We're currently open`
-        : `${time} - We're closed`}
+      {isOpen && (
+        <div className="order">
+          <p>
+            We're open until {closeHours}:00. Come visit us or order online.
+          </p>
+          <button className="btn">Open</button>
+        </div>
+      )}
     </footer>
   );
 }
