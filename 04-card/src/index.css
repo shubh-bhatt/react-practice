@@ -30,12 +30,12 @@
   padding-top: 10px;
 }
 
-.skill-list {
+.company-list {
   display: flex;
   flex-wrap: wrap;
 }
 
-.skill {
+.company {
   padding: 5px;
   border-radius: 5px;
   margin-left: 50px;

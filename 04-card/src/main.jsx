@@ -2,6 +2,29 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 
+const companies = [
+  {
+    company: "Tesla",
+    level: "advanced",
+    color: "#e84f33",
+  },
+  {
+    company: "SpaceX",
+    level: "advanced",
+    color: "#60dafb",
+  },
+  {
+    company: "SolarCity",
+    level: "intermediate",
+    color: "#86ef1dff",
+  },
+  {
+    company: "xAI",
+    level: "begineer",
+    color: "#f1af6cff",
+  },
+];
+
 function Image() {
   return (
     <img
@@ -25,22 +48,25 @@ function Details() {
   );
 }
 
-function SkillList() {
+function CompanyList() {
   return (
-    <div className="skill-list">
-      <Skill skill="Tesla" emoji="🚗" color="red" />
-      <Skill skill="SpaceX" emoji="🚀" color="skyblue" />
-      <Skill skill="SolarCity" emoji="💪" color="lightgreen" />
-      <Skill skill="xAI" emoji="💻" color="yellow" />
+    <div className="company-list">
+      {companies.map((data) => (
+        <Company data={data} key={data.color} />
+      ))}
     </div>
   );
 }
 
-function Skill(props) {
+function Company(props) {
+  const { color, company, level } = props.data;
+
   return (
-    <div className="skill" style={{ backgroundColor: props.color }}>
-      <span>{props.skill}</span>
-      <span>{props.emoji}</span>
+    <div className={`company`} style={{ backgroundColor: `${color}` }}>
+      <span>{company}</span>
+      <span>{level === "begineer" && "👶"}</span>
+      <span>{level === "intermediate" && "👌"}</span>
+      <span>{level === "advanced" && "💪"}</span>
     </div>
   );
 }
@@ -50,7 +76,7 @@ function App() {
     <div className="container">
       <Image />
       <Details />
-      <SkillList />
+      <CompanyList />
     </div>
   );
 }
