@@ -66,15 +66,18 @@ function Header() {
 }
 
 function Menu() {
+  let pizzas = pizzaData;
   return (
     <main className="menu">
       <h2>Our Menu</h2>
 
-      <ul className="pizzas">
-        {pizzaData.map((pizza) => (
-          <Pizza key={pizza.name} pizzaObj={pizza} />
-        ))}
-      </ul>
+      {pizzas.length > 0 && (
+        <ul className="pizzas">
+          {pizzas.map((pizza) => (
+            <Pizza key={pizza.name} pizzaObj={pizza} />
+          ))}
+        </ul>
+      )}
     </main>
   );
 }
