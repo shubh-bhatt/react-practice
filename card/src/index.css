@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 400px;
+  height: 550px;
+  margin-top: 40px;
+  margin-left: 40px;
+  border: 4px solid black;
+  font-family: "Roboto Mono";
+}
+
+.elon-musk {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.details {
+  padding: 20px;
+  padding-bottom: 0px;
+}
+
+.about {
+  padding-top: 10px;
+}
+
+.company-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.company {
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: 50px;
+}
