@@ -12,29 +12,42 @@ export default function App() {
 function Counter() {
   const [step, setStep] = useState(1);
   const [count, setCount] = useState(0);
+
+  function handleReset() {
+    setCount(0);
+    setStep(1);
+  }
+
   let date = new Date();
   date.setDate(date.getDate() + count);
 
   return (
-    <>
+    <div className="main-container">
       <div className="increase">
-        <button className="btn" onClick={() => setStep((s) => s - 1)}>
-          -
-        </button>
-        <p>Step: {step}</p>
-        <button className="btn" onClick={() => setStep((s) => s + 1)}>
-          +
-        </button>
+        <input
+          type="range"
+          min="0"
+          max="10"
+          value={step}
+          onChange={(e) => setStep(Number(e.target.value))}
+        />
+        <span>{step}</span>
       </div>
+
       <div className="decrease">
         <button className="btn" onClick={() => setCount((c) => c - step)}>
           -
         </button>
-        <p>Count: {count}</p>
+        <input
+          type="number"
+          value={count}
+          onChange={(e) => setCount(Number(e.target.value))}
+        />
         <button className="btn" onClick={() => setCount((c) => c + step)}>
           +
         </button>
       </div>
+
       <h1 style={{ textAlign: "center" }}>
         {count === 0
           ? "Today is "
@@ -43,6 +56,12 @@ function Counter() {
           : `${Math.abs(count)} days from today was `}
         {date.toDateString()}
       </h1>
-    </>
+
+      {count !== 0 || step !== 1 ? (
+        <div className="reset">
+          <button onClick={handleReset}>Reset</button>
+        </div>
+      ) : null}
+    </div>
   );
 }
