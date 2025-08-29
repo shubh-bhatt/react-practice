@@ -25,6 +25,13 @@
   justify-content: center;
   align-items: center;
   background-color: #231f39;
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-8px);
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
 }
 
 .card img {
