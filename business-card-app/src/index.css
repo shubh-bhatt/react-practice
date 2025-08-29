@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.main-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom left, #aa00bb, #450151);
+}
+
+.card {
+  height: 200px;
+  width: 300px;
+  padding: 130px 25px;
+  margin: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #231f39;
+}
+
+.card img {
+  width: 100px;
+  border-radius: 50%;
+  border: 2px solid gray;
+}
+
+.username {
+  font-size: 24px;
+  font-weight: bold;
+  color: #b1b1bc;
+  margin: 10px 10px;
+  text-align: center;
+}
+
+.userbio {
+  text-align: center;
+  color: #b1b1bc;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.role {
+  text-align: center;
+  color: #b1b1bc;
+  font-size: 14px;
+  margin-top: 20px;
+}
