@@ -16,8 +16,17 @@ body {
 }
 
 .main-container {
+  height: 100%;
+  width: 100%;
+  font-size: 100px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
+}
+
+.main-container button {
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
 }

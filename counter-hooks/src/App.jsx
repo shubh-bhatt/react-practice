@@ -2,10 +2,10 @@ import { useState } from "react";
 
 const App = () => {
   const [counter, setCounter] = useState(0);
-  const [mode, setMode] = useState("Dark");
+  const [mode, setMode] = useState("Light");
 
   const styles =
-    mode === "Dark"
+    mode === "Light"
       ? { color: "white", backgroundColor: "black" }
       : { color: "black", backgroundColor: "white" };
 
@@ -15,7 +15,8 @@ const App = () => {
 
   return (
     <div className="main-container" style={styles}>
-      <p>{counter}</p>
+      <p style={{ display: "block" }}>{counter}</p>
+
       <button onClick={() => setCounter((prev) => prev + 1)}>Increase</button>
       <button
         onClick={() => {
