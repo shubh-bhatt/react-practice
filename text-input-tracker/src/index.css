@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  color: black;
+  background-color: white;
+}
+
+.main-container {
+  height: 100%;
+  width: 100%;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.main-container button {
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+}
